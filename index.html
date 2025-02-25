@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fontsの例（自由に変更してください） -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ヘッダー（ナビゲーション） -->
+  <header class="header">
+    <div class="header-logo">
+      <a href="#">MyProfile</a>
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>山田 太郎</h1>
+      <p>Software Engineer / Web Developer</p>
+      <a href="#about" class="btn">More About Me</a>
+    </div>
+  </section>
+
+  <!-- About セクション -->
+  <section id="about" class="about section">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="https://via.placeholder.com/200" alt="プロフィール写真" class="profile-img">
+      <div class="about-text">
+        <p>
+          都内のスタートアップ企業でフロントエンドエンジニアとして活動中。  
+          新しい技術やデザイン、ユーザー体験の探求に情熱を持って取り組んでいます。  
+          大規模なSPA開発から、UI/UX デザイン、バックエンド連携まで幅広く対応可能です。
+        </p>
+        <p>
+          また、個人プロジェクトでOSSへのコントリビューションや  
+          技術ブログの執筆などを通じて、コミュニティ貢献にも力を入れています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills セクション -->
+  <section id="skills" class="skills section">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill-item">
+        <h3>HTML / CSS</h3>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 95%">95%</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <h3>JavaScript</h3>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 90%">90%</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <h3>React / Vue / Svelte</h3>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 85%">85%</div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <h3>Node.js / Express</h3>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 80%">80%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works セクション -->
+  <section id="works" class="works section">
+    <h2>Works</h2>
+    <div class="works-gallery">
+      <div class="works-item">
+        <img src="https://via.placeholder.com/400x250" alt="Project1">
+        <h3>Project Title 1</h3>
+        <p>
+          シングルページアプリケーションで作ったポートフォリオサイト。  
+          直感的なUI設計とアニメーションを取り入れ、ユーザビリティを追求しました。
+        </p>
+      </div>
+      <div class="works-item">
+        <img src="https://via.placeholder.com/400x250" alt="Project2">
+        <h3>Project Title 2</h3>
+        <p>
+          チーム開発でリードエンジニアを担当。  
+          API設計からフロント実装まで、一貫して運用を支援しました。
+        </p>
+      </div>
+      <div class="works-item">
+        <img src="https://via.placeholder.com/400x250" alt="Project3">
+        <h3>Project Title 3</h3>
+        <p>
+          WebGLを用いた3D表現に挑戦したデモサイト。  
+          最新のブラウザ機能を活用し、インタラクティブな演出を実現。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact セクション -->
+  <section id="contact" class="contact section">
+    <h2>Contact</h2>
+    <p>
+      お仕事のご依頼やご相談など、お気軽にご連絡ください。
+    </p>
+    <div class="contact-links">
+      <a href="mailto:example@example.com" class="btn">メールで連絡</a>
+      <a href="https://twitter.com/" target="_blank" class="btn">Twitter</a>
+      <a href="https://github.com/" target="_blank" class="btn">GitHub</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2025 Taro Yamada. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

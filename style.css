@@ -1,0 +1,223 @@
+/* 全体のリセットとベース設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+  }
+  
+  /* ヘッダー */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .header-logo a {
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  .header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  .header-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 0.8rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .header-nav a:hover {
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  /* ヒーローセクション */
+  .hero {
+    background: linear-gradient(120deg, #52b69a, #34a0a4);
+    color: #fff;
+    padding: 6rem 2rem;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .hero-content .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #34a0a4;
+    padding: 0.8rem 1.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .hero-content .btn:hover {
+    background-color: #34a0a4;
+    color: #fff;
+  }
+  
+  /* 共通セクション */
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  .section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #34a0a4;
+    margin: 0.5rem auto 0;
+  }
+  
+  /* About セクション */
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-img {
+    border-radius: 50%;
+    max-width: 200px;
+    min-width: 150px;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+  }
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  /* Skills セクション */
+  .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .skill-item h3 {
+    margin-bottom: 0.5rem;
+  }
+  .skill-bar {
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 20px;
+  }
+  .skill-level {
+    background-color: #34a0a4;
+    color: #fff;
+    text-align: right;
+    padding-right: 0.5rem;
+    line-height: 20px;
+    height: 100%;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  
+  /* Works セクション */
+  .works-gallery {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .works-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  .works-item:hover {
+    transform: translateY(-4px);
+  }
+  .works-item img {
+    width: 100%;
+    display: block;
+  }
+  .works-item h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  .works-item p {
+    margin: 0 1rem 1rem;
+  }
+  
+  /* Contact セクション */
+  .contact {
+    text-align: center;
+  }
+  .contact-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .contact-links .btn {
+    display: inline-block;
+    background-color: #34a0a4;
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .contact-links .btn:hover {
+    background-color: #52b69a;
+    transform: translateY(-2px);
+  }
+  
+  /* フッター */
+  .footer {
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  /* レスポンシブ対応 */
+  @media screen and (max-width: 768px) {
+    .skills-list {
+      grid-template-columns: 1fr;
+    }
+    .about-content {
+      flex-direction: column;
+    }
+    .profile-img {
+      width: 50%;
+    }
+  }
+  
