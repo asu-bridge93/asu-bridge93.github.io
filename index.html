@@ -1,139 +1,154 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Profile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fontsの例（自由に変更してください） -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Asuka Miyazaki Portfolio</title>
+  <!-- Responsive Meta Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts or any other custom fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <!-- ヘッダー（ナビゲーション） -->
+  <!-- Navigation Bar -->
   <header class="header">
-    <div class="header-logo">
-      <a href="#">MyProfile</a>
+    <div class="navbar">
+      <div class="logo">Asuka Miyazaki</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header-nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- ヒーローセクション -->
-  <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero" id="home">
     <div class="hero-content">
-      <h1>山田 太郎</h1>
-      <p>Software Engineer / Web Developer</p>
-      <a href="#about" class="btn">More About Me</a>
+      <h1>Creating the Future<br>with Code & Imagination</h1>
+      <p>
+        I'm a passionate Full-Stack Developer with a focus on cutting-edge web
+        experiences.
+      </p>
+      <button onclick="scrollToSection('contact')">Let’s Connect</button>
     </div>
   </section>
 
-  <!-- About セクション -->
-  <section id="about" class="about section">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <img src="https://via.placeholder.com/200" alt="プロフィール写真" class="profile-img">
-      <div class="about-text">
-        <p>
-          都内のスタートアップ企業でフロントエンドエンジニアとして活動中。  
-          新しい技術やデザイン、ユーザー体験の探求に情熱を持って取り組んでいます。  
-          大規模なSPA開発から、UI/UX デザイン、バックエンド連携まで幅広く対応可能です。
-        </p>
-        <p>
-          また、個人プロジェクトでOSSへのコントリビューションや  
-          技術ブログの執筆などを通じて、コミュニティ貢献にも力を入れています。
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills セクション -->
-  <section id="skills" class="skills section">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill-item">
-        <h3>HTML / CSS</h3>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 95%">95%</div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <h3>JavaScript</h3>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 90%">90%</div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <h3>React / Vue / Svelte</h3>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 85%">85%</div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <h3>Node.js / Express</h3>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: 80%">80%</div>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-flex">
+        <img src="img/profile.png" alt="Profile" class="profile-pic" />
+        <div class="about-text">
+          <p>
+            Hi! I’m Asuka Miyazaki, a software engineer who loves to merge creativity
+            and technology. Whether it's building dynamic front-end interfaces
+            or architecting robust back-end services, I strive to develop
+            solutions that are both innovative and user-centric.
+          </p>
+          <p>
+            With experience in various languages and frameworks (React, Node.js,
+            Go, AWS, etc.), I enjoy exploring the latest tech trends and pushing
+            the boundaries of what’s possible on the web.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Works セクション -->
-  <section id="works" class="works section">
-    <h2>Works</h2>
-    <div class="works-gallery">
-      <div class="works-item">
-        <img src="https://via.placeholder.com/400x250" alt="Project1">
-        <h3>Project Title 1</h3>
-        <p>
-          シングルページアプリケーションで作ったポートフォリオサイト。  
-          直感的なUI設計とアニメーションを取り入れ、ユーザビリティを追求しました。
-        </p>
-      </div>
-      <div class="works-item">
-        <img src="https://via.placeholder.com/400x250" alt="Project2">
-        <h3>Project Title 2</h3>
-        <p>
-          チーム開発でリードエンジニアを担当。  
-          API設計からフロント実装まで、一貫して運用を支援しました。
-        </p>
-      </div>
-      <div class="works-item">
-        <img src="https://via.placeholder.com/400x250" alt="Project3">
-        <h3>Project Title 3</h3>
-        <p>
-          WebGLを用いた3D表現に挑戦したデモサイト。  
-          最新のブラウザ機能を活用し、インタラクティブな演出を実現。
-        </p>
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-cards">
+        <div class="skill-card">
+          <h3>Front-end</h3>
+          <p>React, Next.js, Typescript, HTML, CSS, JavaScript</p>
+        </div>
+        <div class="skill-card">
+          <h3>Back-end</h3>
+          <p>Node.js, Go, Python, RESTful APIs</p>
+        </div>
+        <div class="skill-card">
+          <h3>Infrastructure</h3>
+          <p>Google Cloud</p>
+        </div>
+        <div class="skill-card">
+          <h3>Other Tools</h3>
+          <p>Git & GitHub, Communication</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact セクション -->
-  <section id="contact" class="contact section">
-    <h2>Contact</h2>
-    <p>
-      お仕事のご依頼やご相談など、お気軽にご連絡ください。
-    </p>
-    <div class="contact-links">
-      <a href="mailto:example@example.com" class="btn">メールで連絡</a>
-      <a href="https://twitter.com/" target="_blank" class="btn">Twitter</a>
-      <a href="https://github.com/" target="_blank" class="btn">GitHub</a>
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p class="portfolio-intro">
+        Here are some projects I've been working on. From interactive SPAs to
+        large-scale backend systems, I always aim for a seamless user
+        experience.
+      </p>
+      <div class="project-grid">
+        <div class="project-item">
+          <h4>Project One</h4>
+          <p>
+            A next-gen e-commerce platform built with React and Node.js,
+            featuring real-time inventory management.
+          </p>
+        </div>
+        <div class="project-item">
+          <h4>Project Two</h4>
+          <p>
+            A Go-based microservice architecture running on AWS, enabling fast
+            and scalable data processing.
+          </p>
+        </div>
+        <div class="project-item">
+          <h4>Project Three</h4>
+          <p>
+            A slick admin dashboard developed with Vue.js, providing real-time
+            analytics and custom reporting.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- フッター -->
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="contact-description">
+        Ready to start a project or want to know more? Feel free to drop a
+        message below!
+      </p>
+      <form class="contact-form" onsubmit="return handleSubmit(this)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Taro Yamada. All Rights Reserved.</p>
+    <p>&copy; 2025 John Doe. All Rights Reserved.</p>
   </footer>
 
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
 </body>
 </html>

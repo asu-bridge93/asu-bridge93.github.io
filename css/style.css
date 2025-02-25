@@ -1,223 +1,253 @@
-/* 全体のリセットとベース設定 */
+/* GLOBAL STYLES */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  /* Animated gradient background */
+  background: linear-gradient(
+    270deg,
+    #ff6ec4,
+    #7873f5,
+    #1fd1f9,
+    #b8ffeb,
+    #ff6ec4
+  );
+  background-size: 800% 800%;
+  animation: gradientShift 30s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
-  html {
-    scroll-behavior: smooth;
+  50% {
+    background-position: 100% 50%;
   }
-  body {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  /* ヘッダー */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .header-logo a {
-    font-weight: 700;
-    color: #333;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  .header-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  .header-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 0.5rem 0.8rem;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .header-nav a:hover {
-    background-color: #333;
-    color: #fff;
-    border-radius: 4px;
-  }
-  
-  /* ヒーローセクション */
-  .hero {
-    background: linear-gradient(120deg, #52b69a, #34a0a4);
-    color: #fff;
-    padding: 6rem 2rem;
-    text-align: center;
-  }
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 20px;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navbar li a:hover {
+  color: #00ffc6;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero-content {
+  margin-top: -60px; /* Offset for header height */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-content button {
+  padding: 15px 30px;
+  border: none;
+  background: #00ffc6;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 4px;
+}
+.hero-content button:hover {
+  background: #00b189;
+}
+
+/* SECTION WRAPPER */
+section {
+  padding: 80px 20px;
+}
+
+/* ABOUT SECTION */
+.about .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+}
+.about-text p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* SKILLS SECTION */
+.skills .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.skill-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+.skill-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* PORTFOLIO SECTION */
+.portfolio .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.portfolio-intro {
+  margin: 20px 0 40px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.project-item {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTACT SECTION */
+.contact .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-description {
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.contact-form button {
+  padding: 15px;
+  border: none;
+  background: #00ffc6;
+  color: #000;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 4px;
+}
+.contact-form button:hover {
+  background: #00b189;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    font-size: 2.2rem;
   }
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+  .project-grid {
+    grid-template-columns: 1fr;
   }
-  .hero-content .btn {
-    display: inline-block;
-    background-color: #fff;
-    color: #34a0a4;
-    padding: 0.8rem 1.4rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s, color 0.3s;
+}
+
+@media (max-width: 480px) {
+  .profile-pic {
+    width: 200px;
+    height: 200px;
   }
-  .hero-content .btn:hover {
-    background-color: #34a0a4;
-    color: #fff;
-  }
-  
-  /* 共通セクション */
-  .section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-  .section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    position: relative;
-  }
-  .section h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: #34a0a4;
-    margin: 0.5rem auto 0;
-  }
-  
-  /* About セクション */
-  .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-  }
-  .profile-img {
-    border-radius: 50%;
-    max-width: 200px;
-    min-width: 150px;
-    width: 40%;
-    height: auto;
-    object-fit: cover;
-  }
-  .about-text {
-    flex: 1;
-    min-width: 280px;
-  }
-  
-  /* Skills セクション */
-  .skills-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  .skill-item h3 {
-    margin-bottom: 0.5rem;
-  }
-  .skill-bar {
-    background-color: #eee;
-    border-radius: 4px;
-    overflow: hidden;
-    height: 20px;
-  }
-  .skill-level {
-    background-color: #34a0a4;
-    color: #fff;
-    text-align: right;
-    padding-right: 0.5rem;
-    line-height: 20px;
-    height: 100%;
-    font-size: 0.9rem;
-    font-weight: 700;
-  }
-  
-  /* Works セクション */
-  .works-gallery {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  .works-item {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-  }
-  .works-item:hover {
-    transform: translateY(-4px);
-  }
-  .works-item img {
-    width: 100%;
-    display: block;
-  }
-  .works-item h3 {
-    font-size: 1.2rem;
-    margin: 1rem;
-  }
-  .works-item p {
-    margin: 0 1rem 1rem;
-  }
-  
-  /* Contact セクション */
-  .contact {
-    text-align: center;
-  }
-  .contact-links {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .contact-links .btn {
-    display: inline-block;
-    background-color: #34a0a4;
-    color: #fff;
-    padding: 0.8rem 1.4rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  .contact-links .btn:hover {
-    background-color: #52b69a;
-    transform: translateY(-2px);
-  }
-  
-  /* フッター */
-  .footer {
-    background-color: #333;
-    color: #ddd;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    margin-top: 2rem;
-  }
-  
-  /* レスポンシブ対応 */
-  @media screen and (max-width: 768px) {
-    .skills-list {
-      grid-template-columns: 1fr;
-    }
-    .about-content {
-      flex-direction: column;
-    }
-    .profile-img {
-      width: 50%;
-    }
-  }
-  
+}
