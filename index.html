@@ -1,154 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Asuka Miyazaki Portfolio</title>
-  <!-- Responsive Meta Tag -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google Fonts or any other custom fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  />
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Asuka Miyazaki</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <header class="header">
-    <div class="navbar">
-      <div class="logo">Asuka Miyazaki</div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    
+    <div class="background-effects">
+        <div class="gradient-blob"></div>
+        <div class="particles-container" id="particles-js"></div>
+        <div class="geometric-grid"></div>
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Creating the Future<br>with Code & Imagination</h1>
-      <p>
-        I'm a passionate Full-Stack Developer with a focus on cutting-edge web
-        experiences.
-      </p>
-      <button onclick="scrollToSection('contact')">Let’s Connect</button>
-    </div>
-  </section>
+    <header>
+        <div class="logo">Portfolio</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="about-flex">
-        <img src="img/profile.png" alt="Profile" class="profile-pic" />
-        <div class="about-text">
-          <p>
-            Hi! I’m Asuka Miyazaki, a software engineer who loves to merge creativity
-            and technology. Whether it's building dynamic front-end interfaces
-            or architecting robust back-end services, I strive to develop
-            solutions that are both innovative and user-centric.
-          </p>
-          <p>
-            With experience in various languages and frameworks (React, Node.js,
-            Go, AWS, etc.), I enjoy exploring the latest tech trends and pushing
-            the boundaries of what’s possible on the web.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text="宮﨑明日架">宮﨑明日架</h1>
+                <h1 class="glitch-text" data-text="Asuka Miyazaki">Asuka Miyazaki</h1>
+                <p class="subtitle">Data Science & Engineering</p>
+                <p class="subtitle">Student -- The University of Tokyo</p>
+                <div class="hero-description">
+                    <p>Pursuing the possibilities of data science through multicultural experience and technical expertise</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn secondary-btn">ALL MY PROJECTS</a>
+                </div>
+            </div>
+            <div class="hero-image">
+              <div class="geometric-shape">
+                  <!-- 顔画像を幾何学的図形内に追加 -->
+                  <img src="img/アイコン用.jpg" alt="Profile Photo" class="profile-hero-image" />
+              </div>
+          </div>
+        </section>
 
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skill-cards">
-        <div class="skill-card">
-          <h3>Front-end</h3>
-          <p>React, Next.js, Typescript, HTML, CSS, JavaScript</p>
-        </div>
-        <div class="skill-card">
-          <h3>Back-end</h3>
-          <p>Node.js, Go, Python, RESTful APIs</p>
-        </div>
-        <div class="skill-card">
-          <h3>Infrastructure</h3>
-          <p>Google Cloud</p>
-        </div>
-        <div class="skill-card">
-          <h3>Other Tools</h3>
-          <p>Git & GitHub, Communication</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section id="about" class="section-padding">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="profile-image">
+                    <div class="image-container">
+                        <img src="img/アイコン用.jpg" alt="Profile Photo" />
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>I am a sophomore in <b>Department of Systems Innovation, Faculty of Engineering at the University of Tokyo</b>. Having spent my childhood in Guangzhou, China, I gained exposure to diverse cultures and values through <b>four years of experience in an international school</b>.</p>
+                    <p>At Todaiji Gakuen High School, I <b>maintained top academic performance while serving as the basketball team captain</b>, and was admitted to the University of Tokyo Humanities II after a daily two-hour commute. <b>In my freshman year, I achieved the highest GPA in my division and transferred to the Faculty of Engineering with top grades in my sophomore year</b>.</p>
+                    <p>With my experience living in China and <b>two stays in Los Angeles, USA</b>, I have developed an international perspective and aim to <b>excel in the field of data science at a global company</b> in the future.</p>
+                    <p class="quote">"Instead of repeating what is known, I strive to tackle challenges with new approaches based on my experiences" — This is my guiding principle.</p>
+                </div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Internship Experience</h3>
+                        <p>Practical experience in three different fields</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>International Experience</h3>
+                        <p>Stays in China and the US with multicultural exposure</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Awards</h3>
+                        <p>Including Fujitsu Award at AI Buildathon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Portfolio Section -->
-  <section class="portfolio" id="portfolio">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <p class="portfolio-intro">
-        Here are some projects I've been working on. From interactive SPAs to
-        large-scale backend systems, I always aim for a seamless user
-        experience.
-      </p>
-      <div class="project-grid">
-        <div class="project-item">
-          <h4>Project One</h4>
-          <p>
-            A next-gen e-commerce platform built with React and Node.js,
-            featuring real-time inventory management.
-          </p>
-        </div>
-        <div class="project-item">
-          <h4>Project Two</h4>
-          <p>
-            A Go-based microservice architecture running on AWS, enabling fast
-            and scalable data processing.
-          </p>
-        </div>
-        <div class="project-item">
-          <h4>Project Three</h4>
-          <p>
-            A slick admin dashboard developed with Vue.js, providing real-time
-            analytics and custom reporting.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section id="skills" class="section-padding dark-section">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4>Python</h4>
+                            <div class="skill-level">
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                            </div>
+                            <p>Data analysis, machine learning, web development</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h4>React</h4>
+                            <div class="skill-level">
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                            <p>Frontend development, UI/UX design</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h4>TypeScript</h4>
+                            <div class="skill-level">
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                            <p>Type-safe development, business logic implementation</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>NLP</h4>
+                            <div class="skill-level">
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                            <p>Natural language processing, BERT model fine-tuning</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>Data Analysis</h4>
+                            <div class="skill-level">
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                            <p>Statistical analysis, data visualization, report creation</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <h4>Algorithms</h4>
+                            <div class="skill-level">
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot active"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                            <p>Competitive programming, efficient implementation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p class="contact-description">
-        Ready to start a project or want to know more? Feel free to drop a
-        message below!
-      </p>
-      <form class="contact-form" onsubmit="return handleSubmit(this)">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
+        <section id="projects" class="section-padding">
+            <div class="section-header">
+                <h2>Projects & Achievements</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>AI Buildathon</h3>
+                        <div class="project-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Hackathon</span>
+                            <span class="tag">Award</span>
+                        </div>
+                        <p>Developed a sales support application at the AI Buildathon hosted by Mercari and AI Inception Studio, winning the Fujitsu Award.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Nursing Exam Question Assistant Bot</h3>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">BERT</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <p>Developed and managed a bot that assists in creating nursing exam questions through NLP development with BERT fine-tuning.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Japanese Land Registry Map Generation</h3>
+                        <div class="project-tags">
+                            <span class="tag">Algorithm</span>
+                            <span class="tag">Data Processing</span>
+                            <span class="tag">Visualization</span>
+                        </div>
+                        <p>At Toggle internship, developed an algorithm to process nationwide land registry information and generate maps.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Competitive Programming</h3>
+                        <div class="project-tags">
+                            <span class="tag">Algorithm</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Problem Solving</span>
+                        </div>
+                        <p>Reached brown level after three months of intensive study. Acquired efficient algorithm design and problem-solving skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 John Doe. All Rights Reserved.</p>
-  </footer>
+        <section id="experience" class="section-padding dark-section">
+          <div class="section-header">
+              <h2>Work Experience</h2>
+              <div class="section-line"></div>
+          </div>
+          <div class="experience-container">
+              <div class="experience-card main-experience">
+                  <div class="experience-content">
+                      <div class="experience-header">
+                          <h3>Data Scientist & ML Engineer</h3>
+                          <a href="https://jool.jp/corporatepages/" target="_blank" class="company-link">
+                              <span>Jool Inc.</span>
+                              <i class="fas fa-external-link-alt"></i>
+                          </a>
+                      </div>
+                      <div class="experience-period">
+                          <i class="far fa-calendar-alt"></i>
+                          <span>Feb 2024 - Present (1+ year)</span>
+                      </div>
+                      <div class="experience-description">
+                          <p>Working as a core team member in Jool's education technology division, focusing on developing data-driven solutions for nursing education:</p>
+                          <ul class="experience-highlights">
+                              <li>Led the development of an NLP-powered question generation system, increasing content creation efficiency by tuning prompts</li>
+                              <li>Conducted comprehensive educational data analysis for nursing universities using multiple regression analysis and statistical processing</li>
+                              <li>Implemented code refactoring strategies that improved system performance by 20% and reduced maintenance costs</li>
+                              <li>Managed a team of several junior developers for the nursing assistant bot project, delivering ahead of schedule</li>
+                          </ul>
+                      </div>
+                      <div class="experience-tags">
+                          <span class="exp-tag">Python</span>
+                          <span class="exp-tag">NLP</span>
+                          <span class="exp-tag">Data Analysis</span>
+                          <span class="exp-tag">Machine Learning</span>
+                          <span class="exp-tag">Project Management</span>
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="other-experiences">
+                  <div class="experience-card secondary-experience">
+                      <div class="experience-content">
+                          <div class="experience-header">
+                              <h3>Algorithm Engineer Intern</h3>
+                              <a href="https://toggle.co.jp/" target="_blank" class="company-link">
+                                  <span>Toggle Inc.</span>
+                                  <i class="fas fa-external-link-alt"></i>
+                              </a>
+                          </div>
+                          <div class="experience-period">
+                              <i class="far fa-calendar-alt"></i>
+                              <span>Oct 2024 ~ Present</span>
+                          </div>
+                          <div class="experience-description">
+                              <p>Developed a specialized algorithm for processing and visualizing Japanese land registry data, enhancing mapping capabilities for real estate applications.</p>
+                          </div>
+                          <div class="experience-tags">
+                              <span class="exp-tag">Algorithms</span>
+                              <span class="exp-tag">Data Processing</span>
+                              <span class="exp-tag">Geospatial Analysis</span>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <div class="experience-card secondary-experience">
+                      <div class="experience-content">
+                          <div class="experience-header">
+                              <h3>Frontend Developer Intern</h3>
+                              <a href="https://onesteps.co.jp" target="_blank" class="company-link">
+                                  <span>One StepS Inc.</span>
+                                  <i class="fas fa-external-link-alt"></i>
+                              </a>
+                          </div>
+                          <div class="experience-period">
+                              <i class="far fa-calendar-alt"></i>
+                              <span>Apr ~ Jun 2024</span>
+                          </div>
+                          <div class="experience-description">
+                              <p>Contributed to frontend development at this early-stage startup, implementing and improving web applications using React and modern frontend technologies.</p>
+                          </div>
+                          <div class="experience-tags">
+                              <span class="exp-tag">React</span>
+                              <span class="exp-tag">TypeScript</span>
+                              <span class="exp-tag">UI/UX</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+        <section id="contact" class="section-padding">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Me</h3>
+                    <p>Feel free to contact me for job opportunities or any questions.</p>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>example@g.ecc.u-tokyo.ac.jp</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bunkyo-ku, Tokyo</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- JavaScript -->
-  <script src="js/script.js"></script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Portfolio Site. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
